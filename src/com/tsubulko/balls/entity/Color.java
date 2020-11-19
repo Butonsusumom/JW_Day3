@@ -1,4 +1,4 @@
-package com.tsubulko.entity;
+package com.tsubulko.balls.entity;
 
 public enum Color {
     BLACK,

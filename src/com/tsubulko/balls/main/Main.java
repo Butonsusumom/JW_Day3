@@ -1,8 +1,9 @@
-package com.tsubulko.main;
+package com.tsubulko.balls.main;
 
-import com.tsubulko.entity.Ball;
-import com.tsubulko.entity.Basket;
-import com.tsubulko.entity.Color;
+import com.tsubulko.balls.entity.Ball;
+import com.tsubulko.balls.entity.Basket;
+import com.tsubulko.balls.entity.Color;
+import com.tsubulko.balls.service.BasketService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,11 +19,11 @@ public class Main {
         ));
 
         Basket basket = new Basket(balls);
+        BasketService basketService= new BasketService();
         System.out.println("Balls inside the basket: ");
         for (Ball ball: basket.getBalls()) {
             System.out.println(ball);
         }
-        System.out.println(basket.getColorCount(Color.BLUE));
-
+        System.out.println(basketService.getColorCount(basket, Color.BLUE));
     }
 }

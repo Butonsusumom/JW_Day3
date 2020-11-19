@@ -1,12 +1,13 @@
-package com.tsubulko.entity;
+package com.tsubulko.balls.entity;
 
+import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 public class Ball {
     private Color color;
     private double weight;
 
-    static Logger log = Logger.getLogger(Ball.class.getName());
+    static final Logger log = LogManager.getRootLogger();
 
     public Color getColor() {
         return color;
